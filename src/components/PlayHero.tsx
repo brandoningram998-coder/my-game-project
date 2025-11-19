@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef } from 'react';
+import { useCallback } from 'react';
 import type { Game } from '@/lib/types';
 import { PlayFrame } from './PlayFrame';
 import { PlayTitleBar } from './PlayTitleBar';
@@ -10,20 +10,14 @@ type PlayHeroProps = {
 };
 
 export function PlayHero({ game }: PlayHeroProps) {
-  const fullscreenHandlerRef = useRef<(() => void) | null>(null);
-
-  const handleRegister = useCallback((handler: () => void) => {
-    fullscreenHandlerRef.current = handler;
-  }, []);
-
-  const handleFullscreenClick = useCallback(() => {
-    fullscreenHandlerRef.current?.();
-  }, []);
+  const handleOpenInNewWindow = useCallback(() => {
+    window.open(game.file_url, '_blank', 'noopener,noreferrer');
+  }, [game.file_url]);
 
   return (
     <>
-      <PlayFrame game={game} onFullscreenRegister={handleRegister} />
-      <PlayTitleBar title={game.title} onRequestFullscreen={handleFullscreenClick} />
+      <PlayFrame game={game} />
+      <PlayTitleBar title={game.title} onRequestFullscreen={handleOpenInNewWindow} />
     </>
   );
 }
