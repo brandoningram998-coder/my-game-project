@@ -35,9 +35,9 @@ declare namespace __next_route_internal_types__ {
     | `/categories`
     | `/contact`
     | `/new`
+    | `/popular`
     | `/privacy`
     | `/terms`
-    | `/popular`
   type DynamicRoutes<T extends string = string> = 
     | `/api/categories/${SafeSlug<T>}/games`
     | `/api/media/${CatchAllSlug<T>}`

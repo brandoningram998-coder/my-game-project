@@ -5,20 +5,65 @@ import type { Game } from '@/lib/types';
 
 type PlayFrameProps = {
   game: Game;
+  onFullscreenRegister?: (handler: () => void) => void;
 };
 
-export function PlayFrame({ game }: PlayFrameProps) {
+function requestElementFullscreen(element: HTMLElement) {
+  const el = element as HTMLElement & {
+    webkitRequestFullscreen?: () => Promise<void> | void;
+    msRequestFullscreen?: () => Promise<void> | void;
+  };
+  if (el.requestFullscreen) {
+    return el.requestFullscreen();
+  }
+  if (el.webkitRequestFullscreen) {
+    return el.webkitRequestFullscreen();
+  }
+  if (el.msRequestFullscreen) {
+    return el.msRequestFullscreen();
+  }
+  return Promise.resolve();
+}
+
+function exitDocumentFullscreen() {
+  const doc = document as Document & {
+    webkitExitFullscreen?: () => Promise<void> | void;
+    msExitFullscreen?: () => Promise<void> | void;
+  };
+  if (doc.exitFullscreen) {
+    return doc.exitFullscreen();
+  }
+  if (doc.webkitExitFullscreen) {
+    return doc.webkitExitFullscreen();
+  }
+  if (doc.msExitFullscreen) {
+    return doc.msExitFullscreen();
+  }
+  return Promise.resolve();
+}
+
+function isDocumentFullscreen() {
+  const doc = document as Document & {
+    webkitFullscreenElement?: Element | null;
+    msFullscreenElement?: Element | null;
+  };
+  return Boolean(
+    doc.fullscreenElement || doc.webkitFullscreenElement || doc.msFullscreenElement
+  );
+}
+
+export function PlayFrame({ game, onFullscreenRegister }: PlayFrameProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const toggleFullscreen = useCallback(async () => {
     if (!containerRef.current) return;
     try {
-      if (!document.fullscreenElement) {
-        await containerRef.current.requestFullscreen();
+      if (!isDocumentFullscreen()) {
+        await requestElementFullscreen(containerRef.current);
         setIsFullscreen(true);
       } else {
-        await document.exitFullscreen();
+        await exitDocumentFullscreen();
         setIsFullscreen(false);
       }
     } catch (error) {
@@ -28,23 +73,28 @@ export function PlayFrame({ game }: PlayFrameProps) {
 
   useEffect(() => {
     const handleFullscreenChange = () => {
-      setIsFullscreen(Boolean(document.fullscreenElement));
+      setIsFullscreen(isDocumentFullscreen());
     };
     document.addEventListener('fullscreenchange', handleFullscreenChange);
-    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange as EventListener);
+    document.addEventListener('msfullscreenchange', handleFullscreenChange as EventListener);
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+      document.removeEventListener('webkitfullscreenchange', handleFullscreenChange as EventListener);
+      document.removeEventListener('msfullscreenchange', handleFullscreenChange as EventListener);
+    };
   }, []);
 
   useEffect(() => {
-    const handleRequest = () => {
-      toggleFullscreen();
-    };
-    window.addEventListener('playframe-fullscreen', handleRequest);
-    return () => window.removeEventListener('playframe-fullscreen', handleRequest);
-  }, [toggleFullscreen]);
+    if (!onFullscreenRegister) {
+      return;
+    }
+    onFullscreenRegister(toggleFullscreen);
+  }, [onFullscreenRegister, toggleFullscreen]);
 
   return (
     <div className="flex flex-col gap-3 lg:gap-4" ref={containerRef}>
-      <div className="relative h-[60vh] w-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-900 shadow-lg sm:h-auto sm:aspect-video lg:h-[55vh]">
+      <div className="relative h-[75vh] w-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-900 shadow-lg sm:h-auto sm:aspect-video lg:h-[55vh]">
         <iframe
           src={game.file_url}
           title={`${game.title} - Play now`}

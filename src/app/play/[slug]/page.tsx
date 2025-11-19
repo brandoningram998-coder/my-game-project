@@ -6,10 +6,9 @@ import { getAllGames, getGameBySlug } from '@/lib/data';
 import { playMetadata } from '@/lib/seo';
 import { RecommendationRail } from '@/components/RecommendationRail';
 import { getRecommendations } from '@/lib/recommendations';
-import { PlayFrame } from '@/components/PlayFrame';
 import { GameStructuredData } from '@/components/GameStructuredData';
 import { buildHowToPlay } from '@/lib/narrative';
-import { PlayTitleBar } from '@/components/PlayTitleBar';
+import { PlayHero } from '@/components/PlayHero';
 
 type PlayPageProps = {
   params: {
@@ -59,8 +58,7 @@ export default function PlayPage({ params }: PlayPageProps) {
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="space-y-2 sm:space-y-3">
-          <PlayFrame game={game} />
-          <PlayTitleBar title={game.title} />
+          <PlayHero game={game} />
           <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <h2 className="mb-3 text-xl font-semibold text-slate-900">How to Play</h2>
             <div className="space-y-3 text-base leading-relaxed text-slate-700">
