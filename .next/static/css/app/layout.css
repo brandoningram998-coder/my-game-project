@@ -541,9 +541,6 @@ video {
 .-mt-10 {
   margin-top: -2.5rem;
 }
-.-mt-8 {
-  margin-top: -2rem;
-}
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -640,6 +637,9 @@ video {
 .max-w-\[110rem\] {
   max-width: 110rem;
 }
+.max-w-4xl {
+  max-width: 56rem;
+}
 .border-collapse {
   border-collapse: collapse;
 }
@@ -728,6 +728,11 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 .overflow-hidden {
   overflow: hidden;
@@ -890,9 +895,6 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.pb-0 {
-  padding-bottom: 0px;
-}
 .pl-5 {
   padding-left: 1.25rem;
 }
@@ -998,6 +1000,9 @@ video {
 .text-yellow-400 {
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity, 1));
+}
+.underline {
+  text-decoration-line: underline;
 }
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -1209,10 +1214,6 @@ img {
     margin-bottom: -3rem;
   }
 
-  .sm\:-mt-10 {
-    margin-top: -2.5rem;
-  }
-
   .sm\:-mt-12 {
     margin-top: -3rem;
   }
@@ -1273,10 +1274,6 @@ img {
     gap: 1rem;
   }
 
-  .sm\:gap-10 {
-    gap: 2.5rem;
-  }
-
   .sm\:gap-8 {
     gap: 2rem;
   }
@@ -1305,18 +1302,6 @@ img {
     padding-right: 1.5rem;
   }
 
-  .sm\:pb-0 {
-    padding-bottom: 0px;
-  }
-
-  .sm\:pb-2 {
-    padding-bottom: 0.5rem;
-  }
-
-  .sm\:pb-1 {
-    padding-bottom: 0.25rem;
-  }
-
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1325,6 +1310,11 @@ img {
   .sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .sm\:shadow-sm {
@@ -1384,10 +1374,6 @@ img {
 }
 
 @media (min-width: 1024px) {
-
-  .lg\:-mt-12 {
-    margin-top: -3rem;
-  }
 
   .lg\:h-\[55vh\] {
     height: 55vh;
