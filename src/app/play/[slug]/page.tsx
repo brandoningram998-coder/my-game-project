@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -77,13 +77,14 @@ export default function PlayPage({ params }: PlayPageProps) {
                 href={`/game/${recommended.slug}`}
                 className="overflow-hidden rounded-2xl border border-slate-200 transition hover:-translate-y-1 hover:border-primary"
               >
-                <Image
+                <img
                   src={recommended.thumbnail_url}
                   alt={recommended.title}
                   width={400}
                   height={400}
                   className="aspect-square w-full object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
                 <span className="sr-only">{recommended.title}</span>
               </Link>

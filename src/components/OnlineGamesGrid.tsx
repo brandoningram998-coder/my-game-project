@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import Link from 'next/link';
 import clsx from 'clsx';
 import type { Game } from '@/lib/types';
@@ -20,12 +20,14 @@ export function OnlineGamesGrid({ games }: OnlineGamesGridProps) {
           )}
         >
           <div className="relative w-full pb-[100%]">
-            <Image
+            <img
               src={game.thumbnail_url}
               alt={game.title}
-              fill
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 12vw"
               className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </Link>

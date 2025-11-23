@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/page": [
+    "/(fullscreen)/onlinegames/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/(fullscreen)/onlinegames/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -15,21 +15,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/game/[slug]/page.js"
-    ],
-    "/(fullscreen)/onlinegames/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(fullscreen)/onlinegames/page.js"
-    ],
-    "/category/[slug]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/category/[slug]/page.js"
-    ],
-    "/play/[slug]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/play/[slug]/page.js"
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",

@@ -1,6 +1,6 @@
 ﻿import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
+
 import Link from 'next/link';
 import { getGameBySlug } from '@/lib/data';
 import { gameMetadata } from '@/lib/seo';
@@ -44,12 +44,14 @@ export default function GamePage({ params }: GamePageProps) {
           <div className="flex flex-col gap-2 rounded-3xl border border-slate-200 bg-white p-4 shadow-sm md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-4">
               <div className="h-32 w-32 overflow-hidden rounded-2xl border border-slate-200">
-                <Image
+                <img
                   src={game.thumbnail_url}
                   alt={game.title}
                   width={576}
                   height={576}
                   className="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div>
@@ -146,13 +148,14 @@ export default function GamePage({ params }: GamePageProps) {
                 href={`/game/${recommended.slug}`}
                 className="overflow-hidden rounded-2xl border border-slate-200 transition hover:-translate-y-1 hover:border-primary"
               >
-                <Image
+                <img
                   src={recommended.thumbnail_url}
                   alt={recommended.title}
                   width={320}
                   height={320}
                   className="aspect-square w-full object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
                 <span className="sr-only">{recommended.title}</span>
               </Link>

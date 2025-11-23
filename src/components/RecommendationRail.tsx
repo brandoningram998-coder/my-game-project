@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import Link from 'next/link';
 import type { Game } from '@/lib/types';
 
@@ -27,7 +27,7 @@ export function RecommendationRail({ games, heading = 'Recommended Games' }: Rec
             href={`/game/${game.slug}`}
             className="group block overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-primary hover:shadow-lg"
           >
-            <Image
+            <img
               src={game.thumbnail_url}
               alt={game.title}
               width={600}
@@ -35,6 +35,7 @@ export function RecommendationRail({ games, heading = 'Recommended Games' }: Rec
               className="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
               loading="lazy"
+              decoding="async"
             />
             <span className="sr-only">{game.title}</span>
           </Link>

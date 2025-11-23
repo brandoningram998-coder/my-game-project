@@ -1,4 +1,4 @@
-﻿import Image from 'next/image';
+﻿
 import Link from 'next/link';
 import { GameGrid } from '@/components/GameGrid';
 import { getAllGames, getCategories } from '@/lib/data';
@@ -76,25 +76,6 @@ export default function HomePage() {
               </div>
               <div className="grid grid-cols-3 gap-4 sm:hidden">
                 {categoryGames.map((game) => (
-                  <Link
-                    key={`${game.id}-mobile`}
-                    href={`/game/${game.slug}`}
-                    className="group rounded-2xl bg-white p-3 text-center shadow-sm transition hover:-translate-y-1 max-sm:bg-transparent max-sm:p-0 max-sm:shadow-none"
-                  >
-                    <div className="relative mx-auto aspect-square w-full max-w-[110px] overflow-hidden rounded-[28px] bg-slate-100">
-                      <Image
-                        src={game.thumbnail_url}
-                        alt={game.title}
-                        fill
-                        sizes="(max-width: 640px) 100px"
-                        className="object-cover transition duration-500 group-hover:scale-105"
-                        loading="lazy"
-                      />
-                    </div>
-                    <p className="mt-2 text-sm font-semibold text-slate-900 group-hover:text-primary max-sm:hidden">
-                      {game.title}
-                    </p>
-                  </Link>
                 ))}
               </div>
 
@@ -106,13 +87,14 @@ export default function HomePage() {
                     className="group rounded-2xl bg-white p-3 text-center shadow-sm transition hover:-translate-y-1 max-sm:bg-transparent max-sm:p-0 max-sm:shadow-none"
                   >
                     <div className="relative mx-auto aspect-square w-full max-w-[110px] overflow-hidden rounded-[28px] bg-slate-100 sm:h-48 sm:w-48 sm:max-w-none sm:rounded-3xl">
-                      <Image
+                      <img
                         src={game.thumbnail_url}
                         alt={game.title}
-                        fill
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         sizes="(max-width: 640px) 100px, (max-width: 1024px) 160px, 200px"
                         className="object-cover transition duration-500 group-hover:scale-105"
                         loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <p className="mt-2 text-sm font-semibold text-slate-900 group-hover:text-primary max-sm:hidden">

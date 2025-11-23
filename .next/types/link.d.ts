@@ -30,6 +30,7 @@ declare namespace __next_route_internal_types__ {
 
   type StaticRoutes = 
     | `/`
+    | `/onlinegames`
     | `/about`
     | `/api/game-proxy`
     | `/categories`
@@ -38,7 +39,6 @@ declare namespace __next_route_internal_types__ {
     | `/popular`
     | `/privacy`
     | `/terms`
-    | `/onlinegames`
   type DynamicRoutes<T extends string = string> = 
     | `/api/categories/${SafeSlug<T>}/games`
     | `/api/media/${CatchAllSlug<T>}`
