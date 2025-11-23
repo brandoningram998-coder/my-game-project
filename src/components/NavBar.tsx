@@ -9,13 +9,10 @@ export async function NavBar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary-dark">
-          <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary">
-            Play
-          </span>
-          {SITE_NAME}
+        <Link href="/" className="flex items-center gap-2">
+          <img src="/kabuda.png" alt={SITE_NAME} className="h-12 w-auto" />
         </Link>
-        <nav className="hidden gap-6 text-sm font-medium text-slate-600 md:flex">
+        <nav className="hidden gap-6 text-lg font-medium text-slate-600 md:flex">
           <Link href="/" className="transition hover:text-primary">
             Home
           </Link>
@@ -27,7 +24,7 @@ export async function NavBar() {
             New Games
           </Link>
           <Link href="/about" className="transition hover:text-primary">
-            About / Contact
+            About
           </Link>
         </nav>
       </div>
