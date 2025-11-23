@@ -26,10 +26,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/game/[slug]/page.js"
     ],
-    "/_not-found/page": [
+    "/play/[slug]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/play/[slug]/page.js"
+    ],
+    "/category/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/category/[slug]/page.js"
     ]
   }
 }

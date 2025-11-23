@@ -32,33 +32,7 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm text-lg leading-relaxed text-slate-700">
-        <h2 className="text-2xl font-semibold text-slate-900">Contact us</h2>
-        <p>
-          Submit partnership inquiries, advertising questions, or media kits through the channels
-          below. We respond to most requests within two business days.
-        </p>
-        <ul className="space-y-2">
-          <li>
-            Email:{' '}
-            <a href="mailto:hello@gamebox.example" className="text-primary hover:text-primary-dark">
-              hello@gamebox.example
-            </a>
-          </li>
-          <li>
-            Press:{' '}
-            <a href="mailto:press@gamebox.example" className="text-primary hover:text-primary-dark">
-              press@gamebox.example
-            </a>
-          </li>
-          <li>
-            Discord:{' '}
-            <Link href="https://discord.gg/gamebox" className="text-primary hover:text-primary-dark">
-              Join our community
-            </Link>
-          </li>
-        </ul>
-      </section>
+
     </div>
   );
 }
