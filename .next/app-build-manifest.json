@@ -16,6 +16,16 @@
       "static/chunks/main-app.js",
       "static/chunks/app/game/[slug]/page.js"
     ],
+    "/(fullscreen)/onlinegames/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(fullscreen)/onlinegames/page.js"
+    ],
+    "/category/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/category/[slug]/page.js"
+    ],
     "/play/[slug]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
