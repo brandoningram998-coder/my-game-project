@@ -1,5 +1,1 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/(fullscreen)/onlinegames/page": "app/(fullscreen)/onlinegames/page.js",
-  "/game/[slug]/page": "app/game/[slug]/page.js"
-}
+{}

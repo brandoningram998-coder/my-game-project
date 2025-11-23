@@ -32,8 +32,8 @@ declare namespace __next_route_internal_types__ {
     | `/`
     | `/onlinegames`
     | `/about`
-    | `/api/game-proxy`
     | `/categories`
+    | `/api/game-proxy`
     | `/contact`
     | `/new`
     | `/popular`
