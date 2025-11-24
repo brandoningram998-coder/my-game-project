@@ -1,8 +1,5 @@
 {
-  "/about/page": "app/about/page.js",
-  "/contact/page": "app/contact/page.js",
   "/page": "app/page.js",
-  "/game/[slug]/page": "app/game/[slug]/page.js",
-  "/play/[slug]/page": "app/play/[slug]/page.js",
-  "/category/[slug]/page": "app/category/[slug]/page.js"
+  "/articles/page": "app/articles/page.js",
+  "/articles/top-10-free-online-games/page": "app/articles/top-10-free-online-games/page.js"
 }

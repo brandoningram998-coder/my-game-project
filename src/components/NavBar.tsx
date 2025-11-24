@@ -12,7 +12,7 @@ export async function NavBar() {
         <Link href="/" className="flex items-center gap-2">
           <img src="/kabuda.png" alt={SITE_NAME} className="h-12 w-auto" />
         </Link>
-        <nav className="hidden gap-6 text-lg font-medium text-slate-600 md:flex">
+        <nav className="hidden gap-6 text-lg font-medium text-slate-900 md:flex">
           <Link href="/" className="transition hover:text-primary">
             Home
           </Link>
@@ -22,6 +22,9 @@ export async function NavBar() {
           </Link>
           <Link href="/new" className="transition hover:text-primary">
             New Games
+          </Link>
+          <Link href="/articles" className="transition hover:text-primary">
+            Articles
           </Link>
           <Link href="/about" className="transition hover:text-primary">
             About
