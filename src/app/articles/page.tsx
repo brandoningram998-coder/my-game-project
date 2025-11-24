@@ -25,7 +25,7 @@ export default function ArticlesPage() {
                 {articles.map((article) => (
                     <Link
                         key={article.id}
-                        href={`/articles/${article.id}`}
+                        href={`/articles/${article.id}` as any}
                         className="flex flex-col gap-4 overflow-hidden rounded-lg bg-white p-4 shadow-sm transition hover:shadow-md md:flex-row"
                     >
                         <div className="shrink-0 md:w-1/3 lg:w-1/4">
