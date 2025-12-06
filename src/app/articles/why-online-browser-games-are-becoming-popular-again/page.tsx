@@ -33,7 +33,7 @@ export default function ArticlePage() {
 
                 <div className="prose prose-lg prose-slate mx-auto max-w-none">
                     <p className="lead text-xl md:text-2xl text-slate-600 leading-relaxed mb-12">
-                        Remember the golden age of Flash games? For a while, it seemed like mobile apps and high-end console titles had taken over. But recently, there’s been a massive resurgence in browser-based gaming. Why? Let's dive into the trends and data driving this comeback.
+                        Remember the golden age of Flash games? For a while, it seemed like mobile apps and high-end console titles had taken over. But recently, there’s been a massive resurgence in browser-based gaming. Why? Let&apos;s dive into the trends and data driving this comeback.
                     </p>
 
                     <h2 className="text-3xl font-bold text-slate-900 mb-6">1. Instant Accessibility (No Downloads!)</h2>
@@ -41,7 +41,7 @@ export default function ArticlePage() {
                         <img src="/articles/accessibility.png" alt="Accessibility of Browser Games" className="h-full w-full object-cover" />
                     </div>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        In an era where storage space is premium and attention spans are short, the "click and play" nature of browser games is their biggest asset. No 50GB downloads, no app store updates, just instant entertainment.
+                        In an era where storage space is premium and attention spans are short, the &quot;click and play&quot; nature of browser games is their biggest asset. No 50GB downloads, no app store updates, just instant entertainment.
                     </p>
 
                     <h2 className="text-3xl font-bold text-slate-900 mb-6">2. New Web Technologies (WebGPU & WASM)</h2>
@@ -57,22 +57,22 @@ export default function ArticlePage() {
                         <img src="/articles/social-gaming.png" alt="Social Gaming" className="h-full w-full object-cover" />
                     </div>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        Games like <em>Among Us</em> and <em>Gartic Phone</em> showed us that social interaction is key. Browser games are inherently shareable—just send a link to a friend, and you're playing together in seconds. This friction-less multiplayer experience is driving huge engagement.
+                        Games like <em>Among Us</em> and <em>Gartic Phone</em> showed us that social interaction is key. Browser games are inherently shareable—just send a link to a friend, and you&apos;re playing together in seconds. This friction-less multiplayer experience is driving huge engagement.
                     </p>
 
-                    <h2 className="text-3xl font-bold text-slate-900 mb-6">4. The Rise of "Cozy" & Casual Gaming</h2>
+                    <h2 className="text-3xl font-bold text-slate-900 mb-6">4. The Rise of &quot;Cozy&quot; & Casual Gaming</h2>
                     <div className="my-8 aspect-video w-full overflow-hidden rounded-xl shadow-lg">
                         <img src="/articles/casual-gaming.png" alt="Casual Gaming" className="h-full w-full object-cover" />
                     </div>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        Not everyone wants a high-stress competitive shooter. The "cozy gaming" trend has found a natural home on the web. Relaxing puzzles, idle games, and simple simulations offer a perfect mental break during a busy workday.
+                        Not everyone wants a high-stress competitive shooter. The &quot;cozy gaming&quot; trend has found a natural home on the web. Relaxing puzzles, idle games, and simple simulations offer a perfect mental break during a busy workday.
                     </p>
 
                     <hr className="my-12 border-slate-200" />
 
                     <h2 className="text-3xl font-bold text-slate-900 mb-6">Conclusion</h2>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        Browser games aren't just a nostalgic trip; they are a rapidly evolving part of the gaming ecosystem. With better tech, instant access, and a focus on social fun, they are here to stay.
+                        Browser games aren&apos;t just a nostalgic trip; they are a rapidly evolving part of the gaming ecosystem. With better tech, instant access, and a focus on social fun, they are here to stay.
                     </p>
                 </div>
 
