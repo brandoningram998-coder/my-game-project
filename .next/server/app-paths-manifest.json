@@ -1,5 +1,8 @@
 {
   "/page": "app/page.js",
-  "/articles/page": "app/articles/page.js",
-  "/articles/top-10-free-online-games/page": "app/articles/top-10-free-online-games/page.js"
+  "/game/[slug]/page": "app/game/[slug]/page.js",
+  "/articles/myth-busted-can-you-actually-play-online-mini-games-offline/page": "app/articles/myth-busted-can-you-actually-play-online-mini-games-offline/page.js",
+  "/articles/top-10-free-online-games/page": "app/articles/top-10-free-online-games/page.js",
+  "/articles/why-online-browser-games-are-becoming-popular-again/page": "app/articles/why-online-browser-games-are-becoming-popular-again/page.js",
+  "/articles/page": "app/articles/page.js"
 }

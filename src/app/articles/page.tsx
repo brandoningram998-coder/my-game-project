@@ -10,17 +10,32 @@ export default function ArticlesPage() {
     const articles = [
         {
             id: 'top-10-free-online-games',
-            title: 'Top 10 Free Online Games You Can Play Right Now (No Download Required!)',
+            title: 'Top 4 Free Online Games You Can Play Right Now',
             description:
-                'Looking for fun, fast, and addictive games you can play directly in your browser? Whether you’re taking a break, relaxing after school, or just looking for something entertaining on your phone or computer, online web games are the perfect option.',
-            image: '/articles/top-10-games.png',
+                'Looking for fun, fast, and addictive games you can play directly in your browser? We\'ve curated a list of 4 fantastic free online games that you can jump into immediately.',
+            image: '/articles/top-4-games-cover.png',
             date: '2025-11-24',
+        },
+        {
+            id: 'why-online-browser-games-are-becoming-popular-again',
+            title: 'Why Online Browser Games Are Becoming Popular Again (Trends + Data Insight)',
+            description:
+                'Explore the resurgence of browser games, driven by new technologies, accessibility, and social trends.',
+            image: '/articles/browser-games-trends-cover.png',
+            date: '2025-11-25',
+        },
+        {
+            id: 'myth-busted-can-you-actually-play-online-mini-games-offline',
+            title: 'Myth Busted: Can You Actually Play "Online" Mini-Games Offline?',
+            description:
+                'We tested the most common types of online mini-games to see if they work without an internet connection.',
+            image: '/articles/myth-busted-offline-games.png',
+            date: '2025-11-26',
         },
     ];
 
     return (
-        <div className="mx-auto max-w-6xl px-6 py-8">
-            <h1 className="mb-8 text-3xl font-bold text-slate-900">Articles</h1>
+        <div className="mx-auto max-w-6xl px-6 pt-0 pb-8">
             <div className="grid gap-8">
                 {articles.map((article) => (
                     <Link

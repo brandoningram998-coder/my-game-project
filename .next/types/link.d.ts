@@ -30,17 +30,19 @@ declare namespace __next_route_internal_types__ {
 
   type StaticRoutes = 
     | `/`
-    | `/about`
     | `/onlinegames`
+    | `/about`
     | `/api/game-proxy`
+    | `/articles`
+    | `/articles/top-10-free-online-games`
+    | `/articles/why-online-browser-games-are-becoming-popular-again`
+    | `/articles/myth-busted-can-you-actually-play-online-mini-games-offline`
     | `/categories`
     | `/contact`
     | `/new`
     | `/popular`
     | `/privacy`
     | `/terms`
-    | `/articles`
-    | `/articles/top-10-free-online-games`
   type DynamicRoutes<T extends string = string> = 
     | `/api/categories/${SafeSlug<T>}/games`
     | `/api/media/${CatchAllSlug<T>}`
