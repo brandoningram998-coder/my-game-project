@@ -32,6 +32,22 @@ export default function ArticlesPage() {
             image: '/articles/myth-busted-offline-games.png',
             date: '2025-11-26',
         },
+        {
+            id: 'top-5-puzzle-games-that-will-test-your-brainpower',
+            title: 'Top 5 Puzzle Games That Will Test Your Brainpower',
+            description:
+                'Puzzle games offer a perfect mix of challenge and relaxation. Here are 5 games that stand out for their clever mechanics and engaging design.',
+            image: '/articles/happy-glass.png',
+            date: '2025-12-12',
+        },
+        {
+            id: 'the-path-to-power-it-lies-within',
+            title: 'The Path to Power! It Lies Within',
+            description:
+                'Discover 6 exhilarating games that test your skills, strategy, and reflexes. From water slides to basketball showdowns, these titles offer endless fun.',
+            image: '/articles/aqua-thrills.png',
+            date: '2025-12-13',
+        },
     ];
 
     return (

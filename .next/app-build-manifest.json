@@ -11,30 +11,40 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/about/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/about/page.js"
-    ],
     "/articles/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/articles/page.js"
+    ],
+    "/popular/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/popular/page.js"
     ],
     "/new/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/new/page.js"
     ],
-    "/articles/top-10-free-online-games/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/articles/top-10-free-online-games/page.js"
-    ],
     "/articles/why-online-browser-games-are-becoming-popular-again/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/articles/why-online-browser-games-are-becoming-popular-again/page.js"
+    ],
+    "/articles/myth-busted-can-you-actually-play-online-mini-games-offline/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/articles/myth-busted-can-you-actually-play-online-mini-games-offline/page.js"
+    ],
+    "/category/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/category/[slug]/page.js"
+    ],
+    "/categories/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/categories/page.js"
     ],
     "/game/[slug]/page": [
       "static/chunks/webpack.js",
@@ -46,25 +56,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/play/[slug]/page.js"
     ],
-    "/popular/page": [
+    "/articles/top-10-free-online-games/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/popular/page.js"
+      "static/chunks/app/articles/top-10-free-online-games/page.js"
     ],
-    "/(fullscreen)/onlinegames/page": [
+    "/articles/top-5-puzzle-games-that-will-test-your-brainpower/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(fullscreen)/onlinegames/page.js"
+      "static/chunks/app/articles/top-5-puzzle-games-that-will-test-your-brainpower/page.js"
     ],
-    "/category/[slug]/page": [
+    "/articles/the-path-to-power-it-lies-within/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/category/[slug]/page.js"
-    ],
-    "/articles/myth-busted-can-you-actually-play-online-mini-games-offline/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/articles/myth-busted-can-you-actually-play-online-mini-games-offline/page.js"
+      "static/chunks/app/articles/the-path-to-power-it-lies-within/page.js"
     ]
   }
 }

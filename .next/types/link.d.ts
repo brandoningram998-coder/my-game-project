@@ -34,9 +34,11 @@ declare namespace __next_route_internal_types__ {
     | `/about`
     | `/api/game-proxy`
     | `/articles`
+    | `/articles/myth-busted-can-you-actually-play-online-mini-games-offline`
     | `/articles/top-10-free-online-games`
     | `/articles/why-online-browser-games-are-becoming-popular-again`
-    | `/articles/myth-busted-can-you-actually-play-online-mini-games-offline`
+    | `/articles/top-5-puzzle-games-that-will-test-your-brainpower`
+    | `/articles/the-path-to-power-it-lies-within`
     | `/categories`
     | `/contact`
     | `/new`
