@@ -28,7 +28,7 @@ export default function ArticlePage() {
 
                 <div className="prose prose-lg prose-slate mx-auto mb-16 max-w-none">
                     <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-8">
-                        The path to gaming mastery isn't just about high scores—it's about finding the right challenge that sparks your joy. We've curated 6 incredible titles that span frantic sports action, physics-based fun, and strategic tests. Dive in and discover your new favorite!
+                        The path to gaming mastery isn&apos;t just about high scores—it&apos;s about finding the right challenge that sparks your joy. We&apos;ve curated 6 incredible titles that span frantic sports action, physics-based fun, and strategic tests. Dive in and discover your new favorite!
                     </p>
                 </div>
 

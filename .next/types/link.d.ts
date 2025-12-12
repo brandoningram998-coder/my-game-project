@@ -29,22 +29,22 @@ declare namespace __next_route_internal_types__ {
     S extends `${string}${SearchOrHash}` ? never : S
 
   type StaticRoutes = 
+    | `/api/game-proxy`
     | `/`
     | `/onlinegames`
     | `/about`
-    | `/api/game-proxy`
-    | `/articles`
     | `/articles/myth-busted-can-you-actually-play-online-mini-games-offline`
-    | `/articles/top-10-free-online-games`
-    | `/articles/why-online-browser-games-are-becoming-popular-again`
     | `/articles/top-5-puzzle-games-that-will-test-your-brainpower`
     | `/articles/the-path-to-power-it-lies-within`
-    | `/categories`
+    | `/articles/why-online-browser-games-are-becoming-popular-again`
     | `/contact`
-    | `/new`
+    | `/categories`
     | `/popular`
+    | `/new`
     | `/privacy`
     | `/terms`
+    | `/articles`
+    | `/articles/top-10-free-online-games`
   type DynamicRoutes<T extends string = string> = 
     | `/api/categories/${SafeSlug<T>}/games`
     | `/api/media/${CatchAllSlug<T>}`

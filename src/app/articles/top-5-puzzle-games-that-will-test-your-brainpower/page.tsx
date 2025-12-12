@@ -28,7 +28,7 @@ export default function ArticlePage() {
 
                 <div className="prose prose-lg prose-slate mx-auto mb-16 max-w-none">
                     <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-8">
-                        Puzzle games offer a perfect mix of challenge and relaxation, allowing players to use logic, creativity, and problem-solving skills in a fun way. The following five games stand out for their clever mechanics and engaging design, each delivering unique brain-training experiences. If you're looking for puzzle titles that truly test your thinking abilities, these games are the ideal place to start.
+                        Puzzle games offer a perfect mix of challenge and relaxation, allowing players to use logic, creativity, and problem-solving skills in a fun way. The following five games stand out for their clever mechanics and engaging design, each delivering unique brain-training experiences. If you&apos;re looking for puzzle titles that truly test your thinking abilities, these games are the ideal place to start.
                     </p>
                 </div>
 
@@ -73,7 +73,7 @@ export default function ArticlePage() {
                                 </div>
                             </div>
                             <p className="text-xl leading-relaxed text-slate-600 mb-6">
-                                <em>Who Is</em> is a clue-based puzzle game where each level presents a scenario that requires deduction and observation. You may need to figure out who is lying, who is hiding something, or who doesn't match the story. It rewards sharp attention to detail and logical reasoning, making every solved puzzle satisfying.
+                                <em>Who Is</em> is a clue-based puzzle game where each level presents a scenario that requires deduction and observation. You may need to figure out who is lying, who is hiding something, or who doesn&apos;t match the story. It rewards sharp attention to detail and logical reasoning, making every solved puzzle satisfying.
                             </p>
                             <p className="text-xl leading-relaxed text-slate-600">
                                 What sets this game apart is its focus on quick interpretation of visual hints. Instead of solving mathematical puzzles, players must analyze expressions, background items, and hidden clues. It’s a surprisingly effective way to train your ability to spot inconsistencies and think critically under time pressure.
