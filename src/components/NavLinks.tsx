@@ -2,24 +2,10 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { CategoryDropdown } from './CategoryDropdown';
-import type { CategorySummary } from '@/lib/types';
 import clsx from 'clsx';
 
-type NavLinksProps = {
-    categories: CategorySummary[];
-};
-
-export function NavLinks({ categories }: NavLinksProps) {
+export function NavLinks() {
     const pathname = usePathname();
-
-    const links = [
-        { href: '/', label: 'Home' },
-        { href: '/popular', label: 'Popular' },
-        { href: '/new', label: 'New Games' },
-        { href: '/articles', label: 'Articles' },
-        { href: '/about', label: 'About' },
-    ];
 
     // Helper to check if link is active
     const isActive = (href: string) => {
@@ -32,15 +18,13 @@ export function NavLinks({ categories }: NavLinksProps) {
             {/* Home */}
             <NavLink href="/" label="Home" active={isActive('/')} />
 
-            {/* Categories Dropdown */}
-            <CategoryDropdown categories={categories} />
+            {/* Other Links */}
 
             {/* Other Links */}
-            <NavLink href="/popular" label="Popular" active={isActive('/popular')} />
-            <NavLink href="/new" label="New Games" active={isActive('/new')} />
+
             <NavLink href="/articles" label="Articles" active={isActive('/articles')} />
             <NavLink href="/about" label="About" active={isActive('/about')} />
-        </nav>
+        </nav >
     );
 }
 

@@ -1,156 +1,25 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/app/_not-found/page-3149a995df483dd1.js"
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
     ],
     "/layout": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/css/67468af50ab667ae.css",
-      "static/chunks/231-1ad76b238a08cd8d.js",
-      "static/chunks/app/layout-8aea16b17e6c64a6.js"
-    ],
-    "/category/[slug]/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/231-1ad76b238a08cd8d.js",
-      "static/chunks/app/category/[slug]/page-3c457c0e9bb1404f.js"
-    ],
-    "/game/[slug]/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/231-1ad76b238a08cd8d.js",
-      "static/chunks/app/game/[slug]/page-5700a0f264275a1e.js"
-    ],
-    "/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/231-1ad76b238a08cd8d.js",
-      "static/chunks/app/page-0a4cb442466fca0b.js"
-    ],
-    "/play/[slug]/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/231-1ad76b238a08cd8d.js",
-      "static/chunks/app/play/[slug]/page-67eb879b12b8c1a4.js"
-    ],
-    "/(fullscreen)/onlinegames/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/231-1ad76b238a08cd8d.js",
-      "static/chunks/app/(fullscreen)/onlinegames/page-089c85d603689182.js"
-    ],
-    "/about/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/app/about/page-dbc6580d8fff06c5.js"
-    ],
-    "/articles/myth-busted-can-you-actually-play-online-mini-games-offline/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/231-1ad76b238a08cd8d.js",
-      "static/chunks/app/articles/myth-busted-can-you-actually-play-online-mini-games-offline/page-f2b53aed190e9f6d.js"
-    ],
-    "/articles/top-5-puzzle-games-that-will-test-your-brainpower/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/app/articles/top-5-puzzle-games-that-will-test-your-brainpower/page-1dab60c52da3268a.js"
-    ],
-    "/articles/the-path-to-power-it-lies-within/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/app/articles/the-path-to-power-it-lies-within/page-30f2137857da2d66.js"
-    ],
-    "/articles/why-online-browser-games-are-becoming-popular-again/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/app/articles/why-online-browser-games-are-becoming-popular-again/page-c835e1a1ac757384.js"
-    ],
-    "/contact/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/app/contact/page-17ea65a177ff0b50.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
     "/categories/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/231-1ad76b238a08cd8d.js",
-      "static/chunks/app/categories/page-28f8161c8af6834e.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/categories/page.js"
     ],
-    "/popular/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/231-1ad76b238a08cd8d.js",
-      "static/chunks/app/popular/page-5d6a549a46c20cb0.js"
-    ],
-    "/new/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/231-1ad76b238a08cd8d.js",
-      "static/chunks/app/new/page-531e0accdf1843eb.js"
-    ],
-    "/privacy/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/app/privacy/page-0245e1a94c3c2b09.js"
-    ],
-    "/terms/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/app/terms/page-e10db4e8fda4cfc4.js"
-    ],
-    "/articles/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/231-1ad76b238a08cd8d.js",
-      "static/chunks/app/articles/page-a40e896245299b21.js"
-    ],
-    "/articles/top-10-free-online-games/page": [
-      "static/chunks/webpack-8581be3563009278.js",
-      "static/chunks/fd9d1056-23bdddb1df3a91c8.js",
-      "static/chunks/23-a3a1b6f47a77ad02.js",
-      "static/chunks/main-app-5fa3a3f99cee3049.js",
-      "static/chunks/app/articles/top-10-free-online-games/page-32c0d8d49dd21b3d.js"
+    "/category/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/category/[slug]/page.js"
     ]
   }
 }

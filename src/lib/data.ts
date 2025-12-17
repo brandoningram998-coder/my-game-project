@@ -1,5 +1,6 @@
 import games from '@data/games.json';
 import type { CategorySummary, Game } from './types';
+export type { Game };
 import { CATEGORY_BATCH_SIZE } from './constants';
 
 function slugifyCategory(value: string): string {

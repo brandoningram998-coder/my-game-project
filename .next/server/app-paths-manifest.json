@@ -1,27 +1,4 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/api/categories/[slug]/games/route": "app/api/categories/[slug]/games/route.js",
-  "/api/game-proxy/route": "app/api/game-proxy/route.js",
-  "/api/media/[...path]/route": "app/api/media/[...path]/route.js",
-  "/api/scripts/[...path]/route": "app/api/scripts/[...path]/route.js",
-  "/category/[slug]/page": "app/category/[slug]/page.js",
-  "/game/[slug]/page": "app/game/[slug]/page.js",
   "/page": "app/page.js",
-  "/play/[slug]/page": "app/play/[slug]/page.js",
-  "/robots.txt/route": "app/robots.txt/route.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
-  "/(fullscreen)/onlinegames/page": "app/(fullscreen)/onlinegames/page.js",
-  "/about/page": "app/about/page.js",
-  "/articles/myth-busted-can-you-actually-play-online-mini-games-offline/page": "app/articles/myth-busted-can-you-actually-play-online-mini-games-offline/page.js",
-  "/articles/top-5-puzzle-games-that-will-test-your-brainpower/page": "app/articles/top-5-puzzle-games-that-will-test-your-brainpower/page.js",
-  "/articles/the-path-to-power-it-lies-within/page": "app/articles/the-path-to-power-it-lies-within/page.js",
-  "/articles/why-online-browser-games-are-becoming-popular-again/page": "app/articles/why-online-browser-games-are-becoming-popular-again/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/categories/page": "app/categories/page.js",
-  "/popular/page": "app/popular/page.js",
-  "/new/page": "app/new/page.js",
-  "/privacy/page": "app/privacy/page.js",
-  "/terms/page": "app/terms/page.js",
-  "/articles/page": "app/articles/page.js",
-  "/articles/top-10-free-online-games/page": "app/articles/top-10-free-online-games/page.js"
+  "/category/[slug]/page": "app/category/[slug]/page.js"
 }

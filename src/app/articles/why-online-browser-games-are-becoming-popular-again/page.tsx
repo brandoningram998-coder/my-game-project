@@ -15,9 +15,7 @@ export default function ArticlePage() {
                     <h1 className="mb-6 text-2xl font-bold leading-tight tracking-tight text-black md:text-3xl text-left">
                         Why Online Browser Games Are Becoming Popular Again
                     </h1>
-                    <p className="max-w-2xl text-lg text-slate-600 md:text-xl text-left">
-                        Trends, Data, and the Future of Web-Based Gaming
-                    </p>
+
                 </div>
             </div>
 

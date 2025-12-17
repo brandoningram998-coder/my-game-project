@@ -22,7 +22,7 @@ export default async function RootLayout({
       </head>
       <body className="bg-slate-100">
         <NavBar />
-        <main className="mx-auto min-h-screen w-full max-w-[110rem] px-4 py-12 sm:px-6 lg:px-10">
+        <main className="mx-auto min-h-screen w-full max-w-[1400px] px-6 py-12 sm:px-8 lg:px-12">
           {children}
         </main>
         <Footer />

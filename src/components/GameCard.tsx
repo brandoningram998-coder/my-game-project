@@ -28,8 +28,9 @@ export function GameCard({
     (isBorderlessVariant
       ? 'bg-transparent p-0 shadow-none ring-0'
       : 'bg-white p-3 shadow-sm ring-1 ring-slate-100'),
-    !isHorizontal &&
-    'sm:bg-white sm:p-4 sm:shadow-sm sm:ring-1 sm:ring-slate-100 sm:hover:-translate-y-1 sm:hover:shadow-lg'
+    !isHorizontal && !isBorderlessVariant &&
+    'sm:bg-white sm:p-4 sm:shadow-sm sm:ring-1 sm:ring-slate-100 sm:hover:shadow-lg',
+    !isHorizontal && 'sm:hover:-translate-y-1'
   );
 
   const imageWrapperClasses = clsx(

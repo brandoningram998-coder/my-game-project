@@ -18,11 +18,11 @@ export default function ArticlePage() {
 
             {/* Main Content */}
             <div className="mx-auto max-w-4xl px-6">
-                <div className="overflow-hidden rounded-2xl mb-8">
+                <div className="aspect-video w-full overflow-hidden rounded-2xl mb-8">
                     <img
                         src="/articles/aqua-thrills.png"
                         alt="Aqua Thrills"
-                        className="h-auto w-full object-cover"
+                        className="h-full w-full object-cover"
                     />
                 </div>
 

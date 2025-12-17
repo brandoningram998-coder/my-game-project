@@ -1,29 +1,24 @@
 ﻿
 import Link from 'next/link';
 import { GameGrid } from '@/components/GameGrid';
-import { getAllGames, getCategories } from '@/lib/data';
+import { HeroCarousel } from '@/components/HeroCarousel';
+import { GameHotList } from '@/components/GameHotList';
+import { getAllGames, getCategories, type Game } from '@/lib/data';
 
 const BROWSE_ICONS: Record<string, string> = {
   action: '⚔️',
-  adventure: '🧭',
-  arcade: '🕹️',
-  box2d: '📦',
-  casual: '☁️',
-  funny: '😄',
-  'hidden-object': '🔍',
-  hypercasual: '🚀',
-  multiplayer: '🤝',
-  platformer: '🪜',
-  puzzle: '🧩',
   racing: '🏁',
-  simulation: '🛠️',
-  sports: '🏅'
+  adventure: '🧭',
+  puzzle: '🧩',
+  casual: '🎮',
+  arcade: '🕹️',
+  simulation: '🛠️'
 };
 
 const SHOWCASE_SETS = [
   { slug: 'action', title: 'Action Games' },
-  { slug: 'racing', title: 'Racing Games' },
-  { slug: 'adventure', title: 'Adventure Games' }
+  { slug: 'casual', title: 'Casual Games' },
+  { slug: 'racing', title: 'Racing Games' }
 ] as const;
 
 function normalizeCategory(value: string): string {
@@ -35,20 +30,105 @@ export default function HomePage() {
   const categories = getCategories();
   const popularTopThirty = [...games]
     .sort((a, b) => b.play_count - a.play_count)
-    .slice(0, 30);
+    .slice(0, 21);
 
   const featuredCategories = categories.filter((category) => category.slug in BROWSE_ICONS);
 
+  // Curated Featured Games with High-Res Images
+  // Curated Featured Games from New Batch
+  const featuredGames = [
+    {
+      id: "draw-my-path-obby",
+      slug: "draw-my-path-obby",
+      title: "Draw My Path Obby",
+      description: "Draw your path to victory in this creative obstacle course.",
+      thumbnail_url: "/carousel/draw-my-path-obby.png",
+      category: "Puzzle",
+      play_count: 500
+    },
+    {
+      id: "indoor-soccer",
+      slug: "indoor-soccer",
+      title: "Indoor Soccer",
+      description: "Experience the fast-paced action of indoor soccer.",
+      thumbnail_url: "/carousel/indoor-soccer.png",
+      category: "Sports",
+      play_count: 600
+    },
+    {
+      id: "lurkers-io",
+      slug: "lurkers-io",
+      title: "Lurkers Io",
+      description: "Survive and dominate in this multiplayer io game.",
+      thumbnail_url: "/carousel/lurkers-io.png",
+      category: "Multiplayer",
+      play_count: 800
+    },
+    {
+      id: "rumble-rush",
+      slug: "rumble-rush",
+      title: "Rumble Rush",
+      description: "Join the rumble and rush to the finish line.",
+      thumbnail_url: "/carousel/rumble-rush.png",
+      category: "Action",
+      play_count: 700
+    },
+    {
+      id: "steal-and-run",
+      slug: "steal-and-run",
+      title: "Steal And Run",
+      description: "Heist the treasure and run for your life.",
+      thumbnail_url: "/carousel/steal-and-run.png",
+      category: "Action",
+      play_count: 450
+    },
+    {
+      id: "subway-surfers",
+      slug: "subway-surfers",
+      title: "Subway Surfers",
+      description: "Dash as fast as you can in this classic runner.",
+      thumbnail_url: "/carousel/subway-surfers.png",
+      category: "Arcade",
+      play_count: 2000
+    }
+  ];
+
+  // Curated Games for Hot List - 8 diverse games
+  const hotListGames = [
+    games.find(g => g.slug === "000094_rainbow-obby"),
+    games.find(g => g.slug === "000109_Stickman-hook"),
+    games.find(g => g.slug === "000116_sushi-party-io"),
+    games.find(g => g.slug === "000239_happy-glass"),
+    games.find(g => g.slug === "000351_mr-bullet"),
+    games.find(g => g.slug === "000407_prankster-3d"),
+    games.find(g => g.slug === "000514_sprint-league"),
+    games.find(g => g.slug === "000602_marble-run-3d"),
+  ].filter((g): g is Game => g !== undefined);
+
+
+
   return (
-    <div className="flex flex-col gap-16 -mt-10 -mb-10 sm:-mt-12 sm:-mb-12">
+    <div className="flex flex-col gap-6 -mt-10 -mb-10 sm:-mt-12 sm:-mb-12">
+      {/* Hero Carousel */}
+      <section aria-label="Featured Games">
+        <HeroCarousel games={featuredGames} />
+      </section>
+
       <section aria-label="Popular Right Now" className="space-y-4">
-        <h2 className="sr-only">Popular Right Now</h2>
+        <h2 className="mb-6 text-2xl font-extrabold text-slate-900 sm:text-3xl">Top Games to Play</h2>
         <GameGrid
           games={popularTopThirty}
           mobileColumns="three"
           cardVariant="borderless"
           hideMobileTitles
         />
+      </section>
+
+
+
+      {/* Game Hot List Section */}
+      <section aria-label="App Hot List">
+        <GameHotList games={hotListGames} />
       </section>
 
       <section className="space-y-6">
@@ -59,7 +139,9 @@ export default function HomePage() {
           if (!categoryGames.length) {
             return null;
           }
-          const showcaseGames = categoryGames.slice(0, 7);
+          // Casual, Action, and Racing show 14 games
+          const gameCount = (set.slug === 'casual' || set.slug === 'action' || set.slug === 'racing') ? 14 : 7;
+          const showcaseGames = categoryGames.slice(0, gameCount);
           return (
             <div
               key={set.slug}
@@ -67,19 +149,14 @@ export default function HomePage() {
             >
               <div className="mb-4 flex items-center justify-between">
                 <h3 className="text-xl font-semibold text-slate-900">{set.title}</h3>
-                <Link
-                  href={`/category/${set.slug}`}
-                  className="rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary hover:text-white"
-                >
-                  View more
-                </Link>
+
               </div>
-              <div className="grid grid-cols-3 gap-4 sm:hidden">
-                {categoryGames.map((game) => (
+              <div className="grid grid-cols-3 gap-6 sm:hidden">
+                {showcaseGames.map((game) => (
                   <Link
                     key={`${game.id}-mobile`}
                     href={`/game/${game.slug}`}
-                    className="group rounded-2xl bg-white p-3 text-center shadow-sm transition hover:-translate-y-1 max-sm:bg-transparent max-sm:p-0 max-sm:shadow-none"
+                    className="group text-center transition hover:-translate-y-1 max-sm:bg-transparent max-sm:p-0 max-sm:shadow-none"
                   >
                     <div className="relative mx-auto aspect-square w-full max-w-[110px] overflow-hidden rounded-[28px] bg-slate-100">
                       <img
@@ -99,14 +176,14 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="hidden grid-cols-3 gap-5 sm:grid sm:grid-cols-5 lg:grid-cols-7">
+              <div className="hidden grid-cols-3 gap-8 sm:grid sm:grid-cols-5 lg:grid-cols-7">
                 {showcaseGames.map((game) => (
                   <Link
                     key={game.id}
                     href={`/game/${game.slug}`}
-                    className="group rounded-2xl bg-white p-3 text-center shadow-sm transition hover:-translate-y-1 max-sm:bg-transparent max-sm:p-0 max-sm:shadow-none"
+                    className="group text-center transition hover:-translate-y-1 max-sm:bg-transparent max-sm:p-0 max-sm:shadow-none"
                   >
-                    <div className="relative mx-auto aspect-square w-full max-w-[110px] overflow-hidden rounded-[28px] bg-slate-100 sm:h-48 sm:w-48 sm:max-w-none sm:rounded-3xl">
+                    <div className="relative mx-auto aspect-square w-full max-w-[110px] overflow-hidden rounded-[28px] bg-slate-100 sm:max-w-none sm:rounded-[36px]">
                       <img
                         src={game.thumbnail_url}
                         alt={game.title}
@@ -129,11 +206,8 @@ export default function HomePage() {
       </section>
 
       <section>
-        <div className="mb-6 flex items-center justify-between">
+        <div className="mb-6">
           <h2 className="text-2xl font-semibold text-slate-900">Category</h2>
-          <Link href="/categories" className="text-sm font-medium text-primary hover:text-primary-dark">
-            All categories
-          </Link>
         </div>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {featuredCategories.map((category) => (
