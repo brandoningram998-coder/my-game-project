@@ -56,13 +56,13 @@ export default function HomePage() {
       play_count: 600
     },
     {
-      id: "lurkers-io",
-      slug: "lurkers-io",
-      title: "Lurkers Io",
-      description: "Survive and dominate in this multiplayer io game.",
-      thumbnail_url: "/carousel/lurkers-io.png",
-      category: "Multiplayer",
-      play_count: 800
+      id: "who-is",
+      slug: "001006_who-is",
+      title: "Who Is",
+      description: "Spot clues, expose liars, and solve each riddle-style mystery.",
+      thumbnail_url: "/carousel/whois.png",
+      category: "Puzzle",
+      play_count: 193972
     },
     {
       id: "rumble-rush",

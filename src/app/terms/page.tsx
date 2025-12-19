@@ -38,8 +38,8 @@ export default function TermsPage() {
             Many titles are provided by outside studios or licensors. All logos, artwork, code, and
             gameplay remain the property of their creators. If you believe something on
             drkabuda.com infringes your rights, send details to{' '}
-            <a href="mailto:hello@drkabuda.com" className="text-primary underline">
-              hello@drkabuda.com
+            <a href="mailto:admin@drkabuda.com" className="text-primary underline">
+              admin@drkabuda.com
             </a>{' '}
             and we will review and take appropriate action, which may include removing the game or
             disabling embeds.
@@ -88,8 +88,8 @@ export default function TermsPage() {
           <p>
             If you need clarification about these terms, encounter technical issues, or want to
             request takedowns, contact{' '}
-            <a href="mailto:hello@drkabuda.com" className="text-primary underline">
-              hello@drkabuda.com
+            <a href="mailto:admin@drkabuda.com" className="text-primary underline">
+              admin@drkabuda.com
             </a>
             . Messages should include enough detail for us to investigate and respond quickly.
           </p>

@@ -63,8 +63,8 @@ export default function PrivacyPage() {
           <p>
             You may request a copy of the session data associated with your visit or ask us to wipe
             previously submitted contact details. Email{' '}
-            <a href="mailto:privacy@drkabuda.com" className="text-primary underline">
-              privacy@drkabuda.com
+            <a href="mailto:admin@drkabuda.com" className="text-primary underline">
+              admin@drkabuda.com
             </a>{' '}
             with enough context to identify your session, and we will respond as quickly as
             possible.
@@ -77,9 +77,9 @@ export default function PrivacyPage() {
             Users covered by GDPR, CCPA, or similar regulations may request access, correction,
             deletion, or portability of their personal information. You also have the right to
             object to certain processing or withdraw consent for optional cookies. Send requests to
-            <a href="mailto:privacy@drkabuda.com" className="text-primary underline">
+            <a href="mailto:admin@drkabuda.com" className="text-primary underline">
               {' '}
-              privacy@drkabuda.com
+              admin@drkabuda.com
             </a>{' '}
             and we will respond within the timeframe required by law.
           </p>
@@ -108,8 +108,8 @@ export default function PrivacyPage() {
           <h2 className="text-xl font-semibold text-slate-900">9. Questions & Feedback</h2>
           <p>
             For privacy-related questions, bug reports, or general feedback, email{' '}
-            <a href="mailto:privacy@drkabuda.com" className="text-primary underline">
-              privacy@drkabuda.com
+            <a href="mailto:admin@drkabuda.com" className="text-primary underline">
+              admin@drkabuda.com
             </a>
             . Please include details about the relevant game or device so we can troubleshoot more
             efficiently.
