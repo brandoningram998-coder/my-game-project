@@ -84,7 +84,7 @@ export default function HomePage() {
     },
     {
       id: "subway-surfers",
-      slug: "subway-surfers",
+      slug: "000619_subway-surfers",
       title: "Subway Surfers",
       description: "Dash as fast as you can in this classic runner.",
       thumbnail_url: "/carousel/subway-surfers.png",
