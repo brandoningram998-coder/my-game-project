@@ -139,12 +139,14 @@ export function HeroCarousel({ games }: HeroCarouselProps) {
                             >
                                 {games.map((game) => (
                                     <div key={game.id} className="h-full min-w-full">
-                                        <img
-                                            src={game.thumbnail_url}
-                                            alt={game.title}
-                                            className="h-full w-full object-cover"
-                                            draggable={false}
-                                        />
+                                        <Link href={`/game/${game.slug}`} className="block h-full w-full">
+                                            <img
+                                                src={game.thumbnail_url}
+                                                alt={game.title}
+                                                className="h-full w-full object-cover"
+                                                draggable={false}
+                                            />
+                                        </Link>
                                     </div>
                                 ))}
                             </div>
